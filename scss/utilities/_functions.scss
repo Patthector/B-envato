@@ -1,0 +1,24 @@
+//
+//FUNCTIONS
+//
+
+//Retriving a color from the Palette color
+@function getColor(
+                    $palette-color,
+                    $color-name){
+  @return map_get(map_get($palette,$palette-color),$color-name);
+
+}
+
+//From pixels to percentages
+@function px-to-em($px){
+
+  @return ($px/16px) * 1em;
+}
+
+//FROM % TO PX. EVERYTHING FOR FIREFOX---THE WIDTH---
+@function firefoxUnit($content,$columns,$gutterContent,$gutterTarget){
+  $target : calc(80vw / 3);
+  //$gutterContent: (80vw * $gutterContent)/100%;
+  @return $target;
+};

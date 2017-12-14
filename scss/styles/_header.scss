@@ -1,0 +1,62 @@
+//
+//HEADER/STYLES
+//
+body{
+  background-color:getColor("scale-of-grey","Alabaster");
+}
+header{
+  background-color:getColor("scale-of-grey","white");
+  box-shadow: .1px 0 1px getColor("scale-of-grey","Nobel");
+  //@import section
+  //for large screens
+    section{
+      button{
+        background-color: getColor("scale-of-grey","white");
+        border:none;
+      }
+      a{
+        @include mx_font_styles($logo-font,
+                                px-to-em(42px),
+                                bold,
+                                uppercase,
+                                none,
+                                $color:getColor("scale-of-grey","Cod Grey"));
+        border: 1px solid getColor("scale-of-grey","grey");
+        @include mq($min:$small){
+          font-size:px-to-em(48px);
+        }
+        @include mq($min:$large){
+          font-size:px-to-em(66px);
+        }
+      }
+
+    }
+    //@import nav
+    nav a{
+        @include mx_font-styles($primary-font,
+                                px-to-em(14px),
+                                400,
+                                uppercase,
+                                none,
+                                none,
+                                2px,
+                                getColor("scale-of-grey","Tundora"));
+
+    }
+    //@import footer
+    footer{
+      @include mq($min:$large){
+        ul a{
+          font-size:px-to-em(13px);
+          color:getColor("scale-of-grey","Mine Shaft");
+        }
+        span{
+          @include mx_font-styles($primary-font,
+                                  px-to-em(12px),
+                                  400,
+                                  $text-align:center,
+                                  $color:getColor("scale-of-grey","Dusty Gray"));
+        }
+      }
+   }
+}

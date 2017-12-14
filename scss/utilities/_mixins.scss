@@ -1,0 +1,60 @@
+//
+//MIXINS
+//
+
+//FLEX display -Mixin
+@mixin flexx (
+              $flex-direction,
+              $flex-wrap,
+              $justify-content)
+{
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  @content;
+
+}
+
+//MEDIA QUERIES--convention: If $minScreenSize is not passed
+//that means we are talking just about maz-width, and
+//in reverse min-width..
+@mixin mq($min : null,$max : null) {
+  @if ($min and $max){//min-width and max-width are defined
+    @media (min-width:$min) and (max-width:$max){
+      @content;
+    }
+  }
+  @elseif ($min){//min-width is defined
+    @media (min-width:$min){
+      @content;
+    }
+  }
+  @elseif ($max){//max-width is defined
+    @media (max-width:$max){
+      @content;
+    }
+  }
+}
+
+//FONTS-STYLES
+@mixin mx_font-styles(
+                      $font-family:null,
+                      $font-size:null,
+                      $font-weight:null,
+                      $text-transform:null,
+                      $text-decoration:null,
+                      $text-align:null,
+                      $letter-spacing:null,
+                      $color:null
+) {
+  font-family:$font-family;
+  font-size:$font-size;
+  font-weight:$font-weight;
+  text-transform:$text-transform;
+  text-decoration:$text-decoration;
+  text-align:$text-align;
+  letter-spacing:$letter-spacing;
+  color:$color;
+  @content;
+}

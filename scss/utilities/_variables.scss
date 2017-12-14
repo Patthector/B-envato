@@ -1,0 +1,33 @@
+//
+//VARIABLES
+//
+
+//FONTS
+$primary-font: 'Open Sans', sans-serif;
+$logo-font: 'Passion One', cursive;
+
+//BREAKPOINTS
+$tiny:550px;
+$small:680px;
+$medium:720px;
+$large:945px;
+$x-large:1024px;
+
+//PALETTE OF COLORS
+$palette : (
+  "scale-of-grey" : (
+            "white"                 : #FFFFFF,
+            "Alabaster"             :darken(#ffffff,3%),
+            "Mercury"               :darken(#ffffff,10%),
+            "Silver"                :darken(#ffffff,20%),
+            "Nobel"                 :darken(#ffffff,30%),
+            "Dusty Gray"            :darken(#ffffff,40%),
+            "grey"                  :darken(#ffffff,50%),
+            "Dove Gray"             :darken(#ffffff,60%),
+            "Tundora"               :darken(#ffffff,70%),
+            "Mine Shaft"            :darken(#ffffff,80%),
+            "Cod Grey"              :darken(#ffffff,90%),
+            "Almost Black"          :darken(#ffffff,95%),
+            "black"                 : #000000,
+  )
+);

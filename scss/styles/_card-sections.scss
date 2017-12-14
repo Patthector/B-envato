@@ -1,0 +1,37 @@
+//
+//CARD-SECTIONS--STYLES
+//
+
+div.grid section{
+  background-color:getColor("scale-of-grey","white");
+  box-shadow: 0 0 5px getColor("scale-of-grey","Mercury");
+
+  p{
+    @include mx_font-styles($primary-font,
+                            px-to-em(10px),
+                            400,
+                            uppercase,
+                            none,
+                            right,
+                            1px,
+                            getColor("scale-of-grey","Dusty Gray"));
+      @include mq($min:$large){
+        font-size:px-to-em(11px);
+      };
+
+  }
+  h2{
+    @include mx_font-styles($primary-font,
+                            px-to-em(14px),
+                            bold,
+                            none,
+                            none,
+                            left,
+                            1px,
+                            getColor("scale-of-grey","Tundora"));
+    @include mq($min:$large){
+      font-size:px-to-em(18px);
+    };
+  }
+
+}

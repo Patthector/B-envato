@@ -1,0 +1,26 @@
+//
+//CARD-SECTIONS--LAYOUT
+//
+
+div.grid section{
+  background-color:rgba(green,.7);
+  margin-bottom: 20px;
+  //@include flexx(row,wrap,center);
+  div{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  p{
+    width: 80%;
+    margin: 2% 10% 0 10%;
+  }
+  h2{
+    width: 80%;
+    margin:2% 10% 5% 10%;//vertical margin must be added to the total
+    //height of the child element h2.height() + h2.width()*7%/100
+
+  }
+
+}
