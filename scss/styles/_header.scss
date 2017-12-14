@@ -45,11 +45,11 @@ header{
     }
     //@import footer
     footer{
+      ul a{
+        font-size:px-to-em(13px);
+        color:getColor("scale-of-grey","Mine Shaft");
+      }
       @include mq($min:$large){
-        ul a{
-          font-size:px-to-em(13px);
-          color:getColor("scale-of-grey","Mine Shaft");
-        }
         span{
           @include mx_font-styles($primary-font,
                                   px-to-em(12px),

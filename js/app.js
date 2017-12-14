@@ -1,7 +1,8 @@
 
-  let width = $(window).width();
+  let width = $(self).outerWidth();
   $('#toggle-menu').on('click',function(){
     $('nav.nav-header').slideToggle('slow');
+    $('footer').slideToggle('slow');
   });
   //THE GRID
 
@@ -27,41 +28,17 @@
 
     for (let i = 0; i < children.length; i++) {
       var finalResultx = BuildingCard(children.eq(i));
-      if(windowWidth >= 550 && windowWidth < 680){
-        if(c1<c2){
-          c1 += finalResultx;
-        }
-        else{
-          c2 += finalResultx;
-        }
-      }
-      else{
-        if(isTheSmallestOne(c1,c2,c3)){
-          c1 += finalResultx;
-        }
-        else if(isTheSmallestOne(c2,c1,c3)){
-          c2 += finalResultx;
-        }
-        else{
-          c3 += finalResultx;
-        }
+      if(i === children.length - 1){
+        let gridHeight = $("#grid").height();
+        let repetitions = Math.ceil(gridHeight / 10);/*10px*/
+        grid.css(`grid-template-rows`,`repeat(${repetitions},10px)`);
+        console.log("Height of the grid");
+        console.log($("#grid").height());
       }
     }
-
-    let gridHeight = Math.max(Math.max(c3,c2),c1);
-    if(windowWidth >= 550 && windowWidth < 680){
-      gridHeight = Math.max(c2,c1);
-    }
-    console.log("HEIGHT IS",gridHeight);
-    //********************************************************
-    //sending the value back to CSS
-    //********************************************************
-    let repetitions = Math.ceil(gridHeight / 10);/*10px*/
-    grid.css(`grid-template-rows`,`repeat(${repetitions},10px)`);
-    console.log(`c1:${c1}-c2:${c2}-c3:${c3}`);
   }
 
-  function BuildingCard(card){
+  function BuildingCard(card,i){
     let array = card.children();
     let height = 0;
     console.log("Height per card");
@@ -80,9 +57,7 @@
         height += array.eq(i).height();
       }
     }
-    console.log("Height:"+height);
     let repetitions = Math.ceil(height / 10);/*10px*/
-    console.log("repetitions:"+repetitions);
     card.css(`grid-row-end`,`span ${repetitions}`);
     return height;
   }
@@ -92,15 +67,18 @@
   }
 
   function OrientResizeFunction(){
-    //AuxGrid();
-    //var auxGrid = virginGrid;
-    //var children = auxGrid.children();
-    CreatingTheGrid(width);
+    if(width >= 550){
+      CreatingTheGrid(width);
+    }
   }
-  $(window).on('load', function(){
-    console.log("The page load");
-    OrientResizeFunction();
 
+  $(window).on('load', function(){
+
+    console.log("The page load");
+    console.log(width);
+    if(width >= 550){
+    OrientResizeFunction();
+    }
   });
 /*
   $( window ).on( "orientationchange", function() {
@@ -111,10 +89,7 @@
 
   $(window).on('resize',function() {
     if($(window).width() != width){
-      console.log("the page resize");
-      $("#grid").remove();
-      var auxGrid = virginGrid;
-      auxGrid.insertAfter( $("header") );
+      console.log("the page resize")
       OrientResizeFunction();
       //window.location = window.location;
     }

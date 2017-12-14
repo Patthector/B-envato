@@ -11,18 +11,18 @@ div.grid{
 //In between tiny and small
     @include mq($min:$tiny){
       display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(45%,1fr));
+      grid-template-columns: repeat(auto-fill,minmax(45%,2fr));
       grid-gap: 0 20px;
       grid-auto-flow: dense;
     };
 
 //for small screens
   @include mq($min:$small){
-    grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(30%,3fr));
   };
 
 //for large screens
   @include mq($min:$medium){
-    grid-template-columns: repeat(auto-fill,minmax(30%,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(30%,3fr));
   };
 }

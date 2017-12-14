@@ -392,7 +392,7 @@ header {
     display: block; }
     header section button {
       display: inline-block;
-      width: 40%;
+      width: 45%;
       padding: 5%;
       text-align: left; }
       @media (min-width: 945px) {
@@ -402,10 +402,7 @@ header {
       display: inline-block;
       align-self: center;
       padding: 0.0625em 0.3125em;
-      margin: 3% 5%; }
-      @media (min-width: 720px) {
-        header section a {
-          margin: 0; } }
+      margin: 2% 0 0 0; }
     @media (min-width: 945px) {
       header section {
         height: 25vh;
@@ -448,7 +445,8 @@ header {
           align-items: center;
           align-self: flex-end; } }
   header footer {
-    display: none; }
+    display: none;
+    padding: 1% 0; }
     @media (min-width: 945px) {
       header footer {
         height: 20vh;
@@ -458,14 +456,17 @@ header {
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: flex-end; } }
-    @media (min-width: 945px) {
-      header footer ul {
-        width: 70%;
-        margin: 0 15% 3vh 15%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-evenly; } }
+    header footer ul {
+      width: 20%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around; }
+      @media (min-width: 945px) {
+        header footer ul {
+          width: 70%;
+          margin: 0 15% 3vh 15%; } }
     header footer span {
       display: none; }
       @media (min-width: 945px) {
@@ -476,15 +477,15 @@ header {
 div.container {
   display: block;
   width: 80%;
-  margin: 10% 10% 2% 10%; }
+  margin: 5% 10% 2% 10%; }
   @media (min-width: 680px) {
     div.container {
       width: 90%;
-      float: right;
-      margin: 10% 5% 2% 5%; } }
+      margin: 5% 5% 2% 5%; } }
   @media (min-width: 945px) {
     div.container {
-      width: 70%; } }
+      width: 70%;
+      float: right; } }
 
 div.grid {
   width: 100%;
@@ -496,29 +497,37 @@ div.grid {
   @media (min-width: 550px) {
     div.grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(45%, 2fr));
       grid-gap: 0 20px;
       grid-auto-flow: dense; } }
   @media (min-width: 680px) {
     div.grid {
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); } }
+      grid-template-columns: repeat(auto-fill, minmax(30%, 3fr)); } }
   @media (min-width: 720px) {
     div.grid {
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); } }
+      grid-template-columns: repeat(auto-fill, minmax(30%, 3fr)); } }
 
 div.grid section {
   background-color: rgba(0, 128, 0, 0.7);
   margin-bottom: 20px; }
+  @media (min-width: 550px) {
+    div.grid section.large-col, div.grid section.medium-col {
+      grid-column-end: span 2; } }
+  @media (min-width: 680px) {
+    div.grid section.large-col {
+      grid-column-end: span 3; }
+    div.grid section.medium-col {
+      grid-column-end: span 2; } }
   div.grid section div {
     width: 100%; }
     div.grid section div img {
       width: 100%; }
   div.grid section p {
-    width: 80%;
-    margin: 2% 10% 0 10%; }
+    width: 95%;
+    margin: 2% 1% 0 3.5%; }
   div.grid section h2 {
-    width: 80%;
-    margin: 2% 10% 5% 10%; }
+    width: 95%;
+    margin: 2% 2.5% 5% 2.5%; }
 
 body {
   background-color: #f7f7f7; }
@@ -552,10 +561,10 @@ header {
     text-align: none;
     letter-spacing: 2px;
     color: #4d4d4d; }
+  header footer ul a {
+    font-size: 0.8125em;
+    color: #333333; }
   @media (min-width: 945px) {
-    header footer ul a {
-      font-size: 0.8125em;
-      color: #333333; }
     header footer span {
       font-family: "Open Sans", sans-serif;
       font-size: 0.75em;
@@ -571,7 +580,7 @@ div.grid section {
   box-shadow: 0 0 5px #e6e6e6; }
   div.grid section p {
     font-family: "Open Sans", sans-serif;
-    font-size: 0.625em;
+    font-size: 0.5625em;
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
@@ -580,7 +589,7 @@ div.grid section {
     color: #999999; }
     @media (min-width: 945px) {
       div.grid section p {
-        font-size: 0.6875em; } }
+        font-size: 0.625em; } }
   div.grid section h2 {
     font-family: "Open Sans", sans-serif;
     font-size: 0.875em;
@@ -592,6 +601,6 @@ div.grid section {
     color: #4d4d4d; }
     @media (min-width: 945px) {
       div.grid section h2 {
-        font-size: 1.125em; } }
+        font-size: 1em; } }
 
 /*# sourceMappingURL=app.css.map */

@@ -5,13 +5,14 @@
 div.container{
   display: block;
   width: 80%;
-  margin:10% 10% 2% 10%;
+  margin:5% 10% 2% 10%;
   @include mq($min:$small){
     width: 90%;
-    float: right;
-    margin:10% 5% 2% 5%;
+    //float: right;
+    margin:5% 5% 2% 5%;
   }
   @include mq($min:$large){
     width: 70%;
+    float: right;
   }
 }

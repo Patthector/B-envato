@@ -22,7 +22,7 @@ header{
     display: block;
       button{
         display: inline-block;
-        width: 40%;
+        width: 45%;
         padding:5%;//this should match with the margin-context
         text-align: left;
         @include mq($min:$large){
@@ -33,10 +33,7 @@ header{
         display: inline-block;
         align-self: center;
         padding:px-to-em(1px) px-to-em(5px);
-        margin: 3% 5%;
-        @include mq($min:$medium){
-          margin:0;
-        }
+        margin: 2% 0 0 0;
       }
       @include mq($min:$large){
         height: 25vh;
@@ -86,6 +83,7 @@ header{
   //@import footer
   footer{
     display: none;
+    padding: 1% 0;//to give some space to social media menu
     @include mq($min:$large){
       height: 20vh;
       width: 90%;
@@ -93,10 +91,13 @@ header{
       @include flexx(column,nowrap,flex-end);
     }
     ul{
+      width:20%;
+      margin:auto;
+      @include flexx(row,nowrap,space-around);
       @include mq($min:$large){
         width: 70%;
         margin: 0 15% 3vh 15%;
-        @include flexx(row,nowrap,space-evenly);
+        //@include flexx(row,nowrap,space-evenly);
       }
     }
     span{
