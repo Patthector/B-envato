@@ -4,11 +4,11 @@
 
 div.grid section{
   background-color:getColor("scale-of-grey","white");
-  box-shadow: 0 0 5px getColor("scale-of-grey","Mercury");
+  box-shadow: 0 0 5px getColor("scale-of-grey","Nobel");
 
   p{
     @include mx_font-styles($primary-font,
-                            px-to-em(9px),
+                            px-to-em($card-p-font-size),
                             400,
                             uppercase,
                             none,
@@ -16,13 +16,14 @@ div.grid section{
                             1px,
                             getColor("scale-of-grey","Dusty Gray"));
       @include mq($min:$large){
-        font-size:px-to-em(10px);
+        $card-p-font-size:10px;
+        font-size:px-to-em($card-p-font-size);
       };
 
   }
   h2{
     @include mx_font-styles($primary-font,
-                            px-to-em(14px),
+                            px-to-em($card-h2-font-size),
                             bold,
                             none,
                             none,
@@ -30,7 +31,8 @@ div.grid section{
                             1px,
                             getColor("scale-of-grey","Tundora"));
     @include mq($min:$large){
-      font-size:px-to-em(16px);
+      $card-h2-font-size:16px;
+      font-size:px-to-em($card-h2-font-size);
     };
   }
 

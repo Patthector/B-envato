@@ -3,16 +3,15 @@
 //
 
 div.container{
-  display: block;
-  width: 80%;
-  margin:5% 10% 2% 10%;
+  @include flexx(row,nowrap,center);
+  width: 95%;
+  margin:px-to-em(20px) 2.5% px-to-em(20px) 2.5%;
   @include mq($min:$small){
     width: 90%;
-    //float: right;
-    margin:5% 5% 2% 5%;
+    margin:px-to-em(30px) 5% px-to-em(30px) 5%;
   }
   @include mq($min:$large){
+    margin-top:15vh;
     width: 70%;
-    float: right;
   }
 }

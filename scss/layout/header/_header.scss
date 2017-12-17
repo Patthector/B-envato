@@ -1,0 +1,29 @@
+//
+//HEADER--LAYOUT
+//
+
+header{
+//for phone screens
+  width: 100%;
+  display: block;
+  //large screens
+  @include mq($min:$large){
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw / 5);/*80%*/
+    height: 100vh;
+  }
+  //
+  //LOGO
+  //
+  @import "./section.scss";
+  //
+  //NAV
+  //
+  @import "nav.scss";
+  //
+  //FOOTER
+  //
+  @import "footer.scss";
+}

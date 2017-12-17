@@ -5,13 +5,13 @@
 div.grid{
 //for phone screens
     width: 100%;
-    background-color:rgba(blue,.5);
     @include flexx(column,nowrap,center);
 
 //In between tiny and small
     @include mq($min:$tiny){
       display: grid;
       grid-template-columns: repeat(auto-fill,minmax(45%,2fr));
+      grid-auto-rows:minmax(10px,auto);
       grid-gap: 0 20px;
       grid-auto-flow: dense;
     };

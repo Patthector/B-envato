@@ -1,0 +1,29 @@
+//
+//FOOTER
+//
+footer{
+  display: none;
+  padding:px-to-em(16px);
+  @include mq($min:$large){
+    height: 20vh;
+    width: 100%;
+    @include flexx(column,nowrap,flex-start);
+  }
+  ul{
+    width:20%;
+    margin:auto;
+    @include flexx(row,nowrap,space-around);
+    @include mq($min:$large){
+      width: 70%;
+      margin: auto;
+    }
+  }
+  span{
+    display: none;
+    @include mq($min:$large){
+      display: inline-block;
+      width: 100%;
+      margin-top:auto;
+    }
+  }
+}

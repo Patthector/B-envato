@@ -1,0 +1,41 @@
+//
+//NAV
+//
+nav{
+  display: none;
+  @include mq($min:$large){
+    height: 50vh;
+    display: flex;
+    @include flexx(column,wrap,center);
+    }
+  ul{
+    width: 100%;
+    text-align: center;
+    @include flexx(column,nowrap,center);
+    @include mq($min:$large){
+      height: 90%;
+      @include flexx(column,nowrap,center){
+          align-items: center;
+          align-self:center;
+        };
+      }
+      li{
+        flex: 1 100%;
+        a{
+          color:getColor("scale-of-grey","Tundora");
+          display: inline-block;
+          padding:px-to-em(12px/2,12px);
+
+          @include mq($min:$large){
+            padding:px-to-em(14px/3,14px);
+            &:hover{
+              border-bottom:.5px solid getColor("scale-of-grey","Silver");
+            }
+          }
+        }
+        @include mq($min:$large){
+          padding:px-to-em(14px/3,14px);
+        }
+      }
+  }
+}

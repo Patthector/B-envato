@@ -11,9 +11,9 @@
 }
 
 //From pixels to percentages
-@function px-to-em($px){
+@function px-to-em($target,$content:$base-font-size){
 
-  @return ($px/16px) * 1em;
+  @return ($target/$content) * 1em;
 }
 
 //FROM % TO PX. EVERYTHING FOR FIREFOX---THE WIDTH---

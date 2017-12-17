@@ -16,17 +16,25 @@ header{
       }
       a{
         @include mx_font_styles($logo-font,
-                                px-to-em(42px),
+                                px-to-em($logo-font-size),
                                 bold,
                                 uppercase,
                                 none,
                                 $color:getColor("scale-of-grey","Cod Grey"));
-        border: 1px solid getColor("scale-of-grey","grey");
+        background: black;
+        color:white;
+
         @include mq($min:$small){
-          font-size:px-to-em(48px);
+          $logo-font-size:48px;
+          font-size:px-to-em($logo-font-size);
         }
         @include mq($min:$large){
-          font-size:px-to-em(66px);
+          background: white;
+          color:black;
+          border: 1px solid getColor("scale-of-grey","Mercury");
+          box-shadow: 0 0 1px getColor("scale-of-grey","Mercury");
+          $logo-font-size:72px;
+          font-size:px-to-em($logo-font-size);
         }
       }
 
@@ -34,13 +42,16 @@ header{
     //@import nav
     nav a{
         @include mx_font-styles($primary-font,
-                                px-to-em(14px),
+                                px-to-em(12px),
                                 400,
                                 uppercase,
                                 none,
                                 none,
                                 2px,
                                 getColor("scale-of-grey","Tundora"));
+        @include mq($min:$large){
+          font-size:14px;
+        };
 
     }
     //@import footer

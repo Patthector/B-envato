@@ -3,8 +3,8 @@
 //
 
 div.grid section{
-  background-color:rgba(green,.7);
   margin-bottom: 20px;
+  @include flexx(column,nowrap,flex-start);
   @include mq($min:$tiny){//2 columns
     &.large-col,&.medium-col{
       grid-column-end: span 2;
@@ -26,13 +26,15 @@ div.grid section{
   }
   p{
     width: 95%;
-    margin: 2% 1% 0 3.5%;
+    //margin: 2% 1% 0 3.5%;
+    padding:px-to-em($card-p-font-size/2,$card-p-font-size)
+          px-to-em($card-p-font-size/4,$card-p-font-size);
   }
   h2{
     width: 95%;
-    margin:2% 2.5% 5% 2.5%;//vertical margin must be added to the total
-    //height of the child element h2.height() + h2.width()*7%/100
-
+    text-align: center;
+    padding:px-to-em($card-h2-font-size,$card-h2-font-size)
+          px-to-em($card-h2-font-size,$card-h2-font-size);
   }
 
 }

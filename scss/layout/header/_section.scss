@@ -1,0 +1,37 @@
+//
+//SECTION
+//
+section{
+  width: 100%;
+  @include flexx(row,nowrap,center);
+  //SECTION FOR LARGE SCREEN
+  @include mq($min:$large){
+    height: 30vh;
+    @include flexx(row,nowrap,center);
+  }
+    button{
+      margin:auto auto auto 12px;
+      @include mq($min:$large){
+        display: none;
+      }
+    }
+    a{
+      transition: all .8s;
+      transform: scale(1);
+      padding:px-to-em($logo-font-size/4,$logo-font-size)
+                px-to-em($logo-font-size/2,$logo-font-size);
+      margin:px-to-em($logo-font-size/3,$logo-font-size)
+            auto px-to-em($logo-font-size/3,$logo-font-size)
+            -36px;
+      &.toggle-animation{
+        transition: all .8s;
+        background: white;
+        color:black;
+        transform: scale(1.5);
+      }
+      @include mq($min:$large){
+        margin: auto;
+      }
+    }
+
+}

@@ -2,9 +2,15 @@
 //VARIABLES
 //
 
-//FONTS
+//FONT STACK
 $primary-font: 'Open Sans', sans-serif;
 $logo-font: 'Passion One', cursive;
+
+//FONT SIZE
+$base-font-size:16px;
+$logo-font-size:36px !default;
+$card-p-font-size:9px !default;
+$card-h2-font-size:14px !default;
 
 //BREAKPOINTS
 $tiny:550px;
@@ -17,7 +23,7 @@ $x-large:1024px;
 $palette : (
   "scale-of-grey" : (
             "white"                 : #FFFFFF,
-            "Alabaster"             :darken(#ffffff,3%),
+            "Alabaster"             :darken(#ffffff,3.5%),
             "Mercury"               :darken(#ffffff,10%),
             "Silver"                :darken(#ffffff,20%),
             "Nobel"                 :darken(#ffffff,30%),
