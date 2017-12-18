@@ -4,4 +4,27 @@
 
 body{
   @include flexx(row,wrap,flex-end);
+
+}
+button.button{
+  display: block;
+}
+button{
+  &.button{
+    display: block;
+    width: 100%;
+  }
+  &.#{&}--top-page{
+    display:block;
+    position:fixed;
+    bottom:5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+  }
+  &.#{&}--load-cards{
+    width:100%;
+    margin:auto;
+    padding:px-to-em(14/2,14) 0;
+  }
 }

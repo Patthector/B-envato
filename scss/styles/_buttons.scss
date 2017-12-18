@@ -1,0 +1,39 @@
+//
+//BUTTONS--STYLES
+//
+button{
+  &.button{
+    background-color: white;
+    @include mx_font-styles($primary-font,
+                            px-to-em(14px),
+                            normal,
+                            none,
+                            none,
+                            center,
+                            1px,
+                            black);
+  }
+  &.#{&}--top-page{
+    border:none;
+    border-radius: 100%;
+    background-color:rgba(getColor("scale-of-grey","black"),.5);
+    color:getColor("scale-of-grey","white");
+    font-size:px-to-em(13px);
+    i{
+      margin:auto;
+    }
+
+  }
+  &.#{&}--load-cards{
+    border:none;
+    @include mx_font-styles($primary-font,
+                            px-to-em(14px),
+                            bold,
+                            uppercase,
+                            none,
+                            center,
+                            1.2px,
+                            getColor("scale-of-grey","Tundora"));
+    box-shadow: 0 0px 4px getColor("scale-of-grey","Nobel");
+  }
+}

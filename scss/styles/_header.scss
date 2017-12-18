@@ -6,7 +6,6 @@ body{
 }
 header{
   background-color:getColor("scale-of-grey","white");
-  box-shadow: .1px 0 1px getColor("scale-of-grey","Nobel");
   //@import section
   //for large screens
     section{
@@ -23,17 +22,11 @@ header{
                                 $color:getColor("scale-of-grey","Cod Grey"));
         background: black;
         color:white;
-
-        @include mq($min:$small){
-          $logo-font-size:48px;
-          font-size:px-to-em($logo-font-size);
-        }
         @include mq($min:$large){
-          background: white;
-          color:black;
-          border: 1px solid getColor("scale-of-grey","Mercury");
-          box-shadow: 0 0 1px getColor("scale-of-grey","Mercury");
-          $logo-font-size:72px;
+          background: getColor("scale-of-grey","white");
+          color:getColor("scale-of-grey","white");
+          text-shadow: -1px 1px 3px getColor("scale-of-grey","Tundora");
+          $logo-font-size:142px;
           font-size:px-to-em($logo-font-size);
         }
       }

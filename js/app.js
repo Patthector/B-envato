@@ -5,6 +5,20 @@
     $('nav.nav-header').slideToggle('slow');
     $('footer').slideToggle('slow');
   });
+
+  //TOP-PAGE BUTTON
+  $("button.button--top-page").on("click",function(e){
+    e.preventDefault();
+    console.log("toppage");
+    console.log($('body').scrollTop());
+    $("html").animate({
+      scrollTop: 0 ,
+    },700,function(){console.log("the animation has ended");});
+  });
+
+
+
+
   //THE GRID
 
   //you dont know how many card/children the grid will have, so you need to
